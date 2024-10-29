@@ -1,8 +1,10 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Raleway', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background: #f4f4f4;
+    color: #333;
 }
 
 header {
@@ -10,30 +12,58 @@ header {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 section {
     padding: 2rem;
-    margin: 1rem;
+    margin: 1rem auto;
+    max-width: 900px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
 }
 
 .project, .experience, .education {
     margin-bottom: 1.5rem;
+}
+
+.project h3, .experience h3, .education h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #555;
 }
 
 footer {
@@ -41,9 +71,24 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
+    margin-top: 2rem;
 }
 
 footer a {
     color: #fff;
     text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
 }
